@@ -5,7 +5,7 @@
     <record id="edit_project_inherit" model="ir.ui.view">
         <field name="name">project.project.form.inherit</field>
         <field name="model">project.project</field>
-		<field name="inherit_id" ref="edit_project" />
+		<field name="inherit_id" ref="project.edit_project" />
 		<field name="arch" type="xml">
 			<field name="user_id" position="before">
 				<field name="project_type" />
@@ -16,7 +16,7 @@
     <record id="view_project_project_filter_inherit" model="ir.ui.view">
         <field name="name">project.project.select.inherit</field>
         <field name="model">project.project</field>
-		<field name="inherit_id" ref="view_project_project_filter" />
+		<field name="inherit_id" ref="project.view_project_project_filter" />
         <field name="arch" type="xml">
 			<xpath expr="search/group" position="inside">
 				<filter string="Type" name="Type" context="{'group_by': 'project_type'}" />
