@@ -263,10 +263,10 @@
                     Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects.
             </p>
         </field>
-    </record>
+    </record> -->
 
     <!-- Task -->
-    <record id="view_task_form2" model="ir.ui.view">
+    <!-- <record id="view_task_form2" model="ir.ui.view">
         <field name="name">project.task.form</field>
         <field name="model">project.task</field>
         <field eval="2" name="priority"/>
@@ -366,10 +366,10 @@
                 </group>
             </form>
         </field>
-    </record>
+    </record> -->
 
     <!-- Project Task Kanban View -->
-    <record model="ir.ui.view" id="view_task_kanban">
+    <!-- <record model="ir.ui.view" id="view_task_kanban">
         <field name="name">project.task.kanban</field>
         <field name="model">project.task</field>
         <field name="arch" type="xml">
@@ -453,17 +453,14 @@
                                             <span style="font-weight:bold;" class="fa fa-fw mt4 fa-meh-o text-warning" t-if="record.rating_last_value.value == 5" title="Latest Rating: Not Satisfied" role="img" aria-label="Neutral face"/>
                                             <span style="font-weight:bold;" class="fa fa-fw mt4 fa-frown-o text-danger" t-if="record.rating_last_value.value == 1" title="Latest Rating: Higly Dissatisfied" role="img" aria-label="Sad face"/>
                                         </b>
-                                        <!-- formating of the date -->
                                         <t t-set="date_format" t-value="'MM/DD/YY'" />
                                         <t t-set="date" t-value=""/>
-                                        <!-- color of the span -->
                                         <t t-if="record.date_deadline.raw_value and moment(record.date_deadline.raw_value.toISOString()).startOf('day') lt moment().startOf('day')">
                                             <t t-set="deadline_class" t-value="'oe_kanban_text_red'" />
                                         </t>
                                         <t t-elif="record.date_deadline.raw_value and moment(record.date_deadline.raw_value.toISOString()).startOf('day') lt moment().endOf('day')">
                                             <t t-set="deadline_class" t-value="'text-warning font-weight-bold'" />
                                         </t>
-                                        <!-- Date value -->
                                         <t t-if="record.date_deadline.raw_value" t-set="date" t-value="record.date_deadline_formatted.raw_value" />
                                         <span name="date" t-attf-class="#{deadline_class || ''}">
                                             <t t-esc="date" />
@@ -618,10 +615,10 @@
         <field name="domain">[('date_deadline','&lt;',time.strftime('%Y-%m-%d'))]</field>
         <field name="filter" eval="True"/>
         <field name="search_view_id" ref="view_task_search_form"/>
-    </record>
+    </record> -->
 
     <!-- Opening task when double clicking on project -->
-    <record id="dblc_proj" model="ir.actions.act_window">
+    <!-- <record id="dblc_proj" model="ir.actions.act_window">
         <field name="res_model">project.task</field>
         <field name="name">Project's tasks</field>
         <field name="view_mode">tree,form,calendar,graph,kanban</field>
