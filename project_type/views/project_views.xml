@@ -18,7 +18,7 @@
         <field name="model">project.project</field>
 		<field name="inherit_id" ref="project.view_project_project_filter" />
         <field name="arch" type="xml">
-			<xpath expr="search/group" position="inside">
+			<xpath expr="//search/group" position="inside">
 				<filter string="Type" name="Type" context="{'group_by': 'project_type'}" />
 			</xpath>
         </field>
