@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 # By DDR
 
-from . import models
+from . import project
