@@ -2,7 +2,7 @@
 # By DDR
 
 {
-    'name': 'project_type',
+    'name': "Project-type",
     'version': '1.0',
     'website': 'https://www.houtbouw-derudder.be',
     'category': 'Operations/Project',
